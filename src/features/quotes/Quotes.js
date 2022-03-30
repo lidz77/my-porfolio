@@ -1,20 +1,26 @@
 import React,{useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
-import PropTypes from 'prop-types'
 import {selectTodayQuote, loadingQuote, getTodayQuote} from './quotesSlice'
 
 const Quotes = (props) => {
   const dispatch = useDispatch();
-
+  const quoteIsLoading = useSelector(loadingQuote);
+  const todayQuote = useSelector(selectTodayQuote);
   useEffect(() => {
     dispatch(getTodayQuote())
   }, [dispatch])
 
-  return (
-    <div className="quote-container">
-      hehe
-    </div>
-  )
+  if (quoteIsLoading) {
+    return <p>Loading quote...</p>
+  } else {
+    return (
+      <div className="quote-container">
+        <p>{todayQuote}</p>
+        hehe
+      </div>
+    )
+  }
+
 }
 
 
