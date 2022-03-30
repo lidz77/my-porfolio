@@ -2,11 +2,9 @@ import {createSlice, createAsyncThunk}  from '@reduxjs/toolkit'
 
 export const getTodayQuote = createAsyncThunk('quotes/getTodayQuote',
   async () => {
-    const data = await fetch('https://zenquotes.io/api/today', {
-    });
-    const response = await data.json();
-    console.log(response);
-    return response;
+    const data = await fetch('https://api.quotable.io/random');
+    const {content, author} = await data.json();
+    return {content, author};
   }
 )
 

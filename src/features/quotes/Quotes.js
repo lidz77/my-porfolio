@@ -9,14 +9,13 @@ const Quotes = (props) => {
   useEffect(() => {
     dispatch(getTodayQuote())
   }, [dispatch])
-  console.log(todayQuote);
   if (quoteIsLoading) {
     return <p>Loading quote...</p>
   } else {
     return (
       <div className="quote-container">
-
-        hehe
+         <h2>{todayQuote.content}</h2>
+         <p>{todayQuote.author}</p>
       </div>
     )
   }
