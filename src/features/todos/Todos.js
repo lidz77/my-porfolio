@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import CreateTodoForm from '../../components/CreateTodoForm';
 import TodosList from '../../components/TodosList'
 
-const Todos = (props) => {
+const Todos = () => {
   return (
     <div className="todos-container">
       <CreateTodoForm />
@@ -11,8 +10,6 @@ const Todos = (props) => {
     </div>
   )
 }
-Todos.propTypes = {
 
-}
 
 export default Todos

@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {useDispatch} from 'react-redux';
-import PropTypes from 'prop-types';
 import {v4 as uuid} from 'uuid';
 import {addTodo} from '../features/todos/todosSlice'
 
@@ -28,8 +27,6 @@ const CreateTodoForm = () => {
     </form>
   )
 }
-CreateTodoForm.propTypes = {
 
-}
 
 export default CreateTodoForm

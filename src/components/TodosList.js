@@ -1,6 +1,5 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux';
-import PropTypes from 'prop-types'
 import {selectAllTodos} from '../features/todos/todosSlice'
 import {removeTodo, changeStatus} from '../features/todos/todosSlice';
 
@@ -33,8 +32,6 @@ const TodosList = (props) => {
     </section>
   )
 }
-TodosList.propTypes = {
 
-}
 
 export default TodosList
