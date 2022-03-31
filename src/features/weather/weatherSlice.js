@@ -6,8 +6,9 @@ let lon = '107.8653757';
 export const getWeatherToday = createAsyncThunk('weather/getWeatherToday',
   async () => {
     const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`);
-    const response = await data.json();
-    return response;
+    const {main, name, weather} = await data.json();
+    console.log({main, name, weather});
+    return {main, name, weather};
   }
 )
 
