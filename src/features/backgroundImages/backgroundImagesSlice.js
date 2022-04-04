@@ -1,8 +1,8 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
-let clientId = 'qECfCNJxXgsRf2Wp63T7SAEW3xz-AzF-WJEcPy14Ywg';
+const clientId = 'qECfCNJxXgsRf2Wp63T7SAEW3xz-AzF-WJEcPy14Ywg';
 
-export const getImages = createAsyncThunk('backgrounds/getImages',
+export const getImages = createAsyncThunk('backgroundImages/getImages',
   async () => {
     const data = await fetch(`https://api.unsplash.com/photos?client_id=${clientId}`);
     const response = await data.json();
@@ -10,11 +10,11 @@ export const getImages = createAsyncThunk('backgrounds/getImages',
   }
 )
 
-export const backgroundsSlice = createSlice({
-  name:'backgrounds',
+export const backgroundImagesSlice = createSlice({
+  name:'backgroundImages',
   initialState:{
     images:{},
-    isLoading: false,
+    isLoading: true,
     hasError: false
   },
   reducers:{},
@@ -35,11 +35,11 @@ export const backgroundsSlice = createSlice({
   }
 })
 
-export const loadingBackgrounds = (state) => {
-  return state.backgrounds.isLoading;
+export const selectBackgrounds = (state) => {
+  return state.backgroundImages.images;
 }
-export const selectBackground = (state) => {
-  return state.backgrounds.images;
+export const loadingBackgrounds = (state) => {
+  return state.backgroundImages.isLoading;
 }
 
-export default backgroundsSlice.reducer
+export default backgroundImagesSlice.reducer

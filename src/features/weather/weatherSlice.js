@@ -7,7 +7,6 @@ export const getWeatherToday = createAsyncThunk('weather/getWeatherToday',
   async () => {
     const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`);
     const {main, name, weather} = await data.json();
-    console.log({main, name, weather});
     return {main, name, weather};
   }
 )
@@ -16,12 +15,10 @@ export const weatherSlice = createSlice({
   name: 'weather',
   initialState:{
     weatherToday:{},
-    isLoading: false,
+    isLoading: true,
     hasError: false
   },
-  reducers:{
-
-  },
+  reducers:{},
   extraReducers:{
     [getWeatherToday.pending]:(state, action) => {
       state.isLoading = true;

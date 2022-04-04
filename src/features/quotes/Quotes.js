@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
 import {selectTodayQuote, loadingQuote, getTodayQuote} from './quotesSlice'
 
-const Quotes = (props) => {
+const Quotes = () => {
   const dispatch = useDispatch();
   const quoteIsLoading = useSelector(loadingQuote);
   const todayQuote = useSelector(selectTodayQuote);
@@ -10,8 +10,10 @@ const Quotes = (props) => {
     dispatch(getTodayQuote())
   }, [dispatch])
   if (quoteIsLoading) {
+    console.log('quote failed');
     return <p>Loading quote...</p>
   } else {
+    console.log('quote loaded')
     return (
       <div className="quote-container">
          <h2>{todayQuote.content}</h2>

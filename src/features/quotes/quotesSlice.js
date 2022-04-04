@@ -12,7 +12,7 @@ export const quotesSlice = createSlice({
   name: 'quotes',
   initialState:{
     todayQuote:{},
-    isLoading: false,
+    isLoading: true,
     hasError: false
   },
   reducers:{},
