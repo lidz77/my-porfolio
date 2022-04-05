@@ -9,15 +9,15 @@ const Weather = () => {
   useEffect(() => {
     dispatch(getWeatherToday());
   }, [dispatch])
-  console.log(weatherToday);
   if (weatherIsLoading) {
-    console.log(weatherIsLoading);
     return <p>Loading Weather</p>
   } else {
     return (
       <div className='weather-container'>
         <h2>{weatherToday.name}</h2>
         <h2>{weatherToday.main.temp}</h2>
+        <h2>{weatherToday.details.main}</h2>
+        <img src={`http://openweathermap.org/img/w/${weatherToday.details.icon}.png`} />
       </div>
     )
   }

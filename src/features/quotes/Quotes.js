@@ -10,10 +10,8 @@ const Quotes = () => {
     dispatch(getTodayQuote())
   }, [dispatch])
   if (quoteIsLoading) {
-    console.log('quote failed');
     return <p>Loading quote...</p>
   } else {
-    console.log('quote loaded')
     return (
       <div className="quote-container">
          <h2>{todayQuote.content}</h2>

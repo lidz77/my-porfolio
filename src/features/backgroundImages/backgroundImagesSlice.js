@@ -6,7 +6,8 @@ export const getImages = createAsyncThunk('backgroundImages/getImages',
   async () => {
     const data = await fetch(`https://api.unsplash.com/photos?client_id=${clientId}`);
     const response = await data.json();
-    return response;
+    let imgList = response.map(item => item.urls.regular);
+    return imgList;
   }
 )
 
