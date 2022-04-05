@@ -24,16 +24,14 @@ const Backgrounds = () => {
   } else {
     return (
       <div className="background-container">
-        <img src={imagesList[imageIndex]} alt="images"/>
-        <button disabled={imageIndex === 0} className="btn-image left" value={-1} onClick={handleClick}> &#8592; </button>
-        <button disabled={imageIndex === imagesLength} className="btn-image right" value={1} onClick={handleClick}> &#8594; </button>
+        <img className="background-images" src={imagesList[imageIndex]} alt="images"/>
+        <button disabled={imageIndex === 0} className="btn-image left" value={-1} onClick={handleClick}> &#8249; </button>
+        <button disabled={imageIndex === imagesLength} className="btn-image right" value={1} onClick={handleClick}>&#8250; </button>
       </div>
     )
   }
 
 }
-Backgrounds.propTypes = {
 
-}
 
 export default Backgrounds

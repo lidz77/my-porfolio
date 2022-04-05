@@ -8,10 +8,10 @@ import BackgroundImages from '../features/backgroundImages/BackgroundImages'
 function App() {
   return (
     <div className="App">
-      <BackgroundImages />
       <Weather />
       <Todos />
       <Quotes />
+      <BackgroundImages />
     </div>
   );
 }

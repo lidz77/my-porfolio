@@ -14,7 +14,6 @@ const Weather = () => {
   } else {
     return (
       <div className='weather-container'>
-        <h2>{weatherToday.name}</h2>
         <h2>{weatherToday.main.temp}</h2>
         <h2>{weatherToday.details.main}</h2>
         <img src={`http://openweathermap.org/img/w/${weatherToday.details.icon}.png`} alt="weather icon"/>
