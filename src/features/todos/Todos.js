@@ -1,6 +1,7 @@
 import React from 'react'
 import CreateTodoForm from '../../components/CreateTodoForm';
 import TodosList from '../../components/TodosList'
+import './Todos.css'
 
 const Todos = () => {
   return (

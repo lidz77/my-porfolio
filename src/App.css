@@ -1,9 +1,5 @@
 .App {
   text-align: center;
-  position: relative;
-  margin: 0 auto;
-  max-width: 600px;
-  width: 95%;
 }
 
 .App-logo {
@@ -40,29 +36,4 @@
   100% {
     transform: translateY(0px);
   }
-}
-
-.background-container{
-  position: absolute;
-  /* z-index: -100; */
-}
-.background-images{
-  border-radius: 1px;
-  filter: blur(10px);
-    -webkit-filter: blur(5px);
-  	-moz-filter: blur(5px);
-  	-o-filter: blur(5px);
-  	-ms-filter: blur(5px);
-    left: 100px;
-    top: 100px;
-    height:600px;
-    width: 600px;
-    z-index: -1000;
-    display: flex;
-}
-.btn-image.left{
-  float: left;
-}
-.btn-image.right{
-  float: right;
 }

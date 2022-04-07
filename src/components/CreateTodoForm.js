@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {v4 as uuid} from 'uuid';
 import {addTodo} from '../features/todos/todosSlice'
+import './CreateTodoForm.css';
 
 const CreateTodoForm = () => {
   const dispatch = useDispatch();

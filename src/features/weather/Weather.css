@@ -1,0 +1,18 @@
+.weather-container {
+  padding-top: 20px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  margin-right: 64px;
+}
+.weather-container h2 {
+  font-size: 32px;
+  font-weight: 300;
+  padding-bottom: 6px;
+}
+.weather-container h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}

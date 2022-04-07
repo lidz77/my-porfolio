@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {getImages, loadingBackgrounds, selectBackgrounds,} from './backgroundImagesSlice'
+import './BackgroundImages.css'
 
 const Backgrounds = () => {
   const dispatch = useDispatch();

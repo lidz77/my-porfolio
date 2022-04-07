@@ -1,0 +1,57 @@
+
+.todo {
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 32px;
+  height: 70px;
+  margin: 6px;
+  border: 2px solid rgba(201, 198, 198, 0.6);
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.btn {
+  display: none;
+}
+
+.todo:hover .btn{
+  position: absolute;
+  top: -15px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+.remove,
+.done {
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.remove {
+  background-color: rgba(186, 112, 119, 0.6);
+  border: 1px solid rgb(207, 157, 162)
+}
+.remove:hover {
+  background-color: rgba(201, 107, 116, 0.9);
+  border: 1px solid rgb(224, 203, 205);
+  transition: 0.4s;
+}
+.done {
+  background-color: rgba(129, 147, 132, 0.6);
+  border: 1px solid rgb(175, 194, 177);
+  margin-left: 6px;
+}
+.done:hover {
+  background-color: rgba(129, 147, 132, 1);
+  border: 1px solid rgb(211, 228, 212);
+  transition: 0.4s;
+  margin-left: 6px;
+}

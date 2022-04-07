@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
 import {selectTodayQuote, loadingQuote, getTodayQuote} from './quotesSlice'
+import './Quotes.css'
 
 const Quotes = () => {
   const dispatch = useDispatch();
@@ -14,8 +15,8 @@ const Quotes = () => {
   } else {
     return (
       <div className="quote-container">
-         <h2>{todayQuote.content}</h2>
-         <p>{todayQuote.author}</p>
+         <h2>"{todayQuote.content}"</h2>
+         <h3>{todayQuote.author}</h3>
       </div>
     )
   }
